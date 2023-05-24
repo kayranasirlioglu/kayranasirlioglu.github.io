@@ -64,18 +64,30 @@
     .image-row{
       display: flex;
       justify-content: space-between;
+	  flex-wrap: wrap;
     }
 
     .image-wrapper {
       text-align: center;
 	  margin-right: 10px;
-	  width: 30%
+	  width: 30%;
+	  margin-bottom: 20px;
     }
 
 	.image-wrapper IMG {
-		width: 200px;
-		height: 200px;
+		width: 100%;
+		height: auto;
+		max-width: 200px;
+		
 	}
+
+	.image-wrapper h3 {
+    max-width: 100%;
+    height: auto;
+    color: #ffffff;
+    font-family: 'Inconsolata', monospace;
+    margin-top: 10px; /* Başlıkların resimlerden aşağıda yer alması için margin-top değerini ayarlayın */
+  }
 
     .image-wrapper p {
       text-align: center;
@@ -84,13 +96,24 @@
 	.store-link {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		margin-top: 10px;
 	}
 
+	.store-link a {
+		display: inline-block;
+	}
+
 	.store-link img {
-		width: 150px;
-		height: 50px;
+		width: 90px;
+		height: 30px;
 		margin: 0 5px;
+	}
+
+	@media (max-width: 768px) {
+		.store-link {
+			flex-direction: column;
+		}
 	}
 
 	@media (max-width: 900px) {
@@ -103,27 +126,27 @@
     .image-wrapper p {
       text-align: center;
     }
-	
+
   </style>
 </head>
 <body>
   <div class="image-row">
     <div class="image-wrapper">
       <img src="GAMES/BuckedIsland.png" alt=""style="max-width: 100%;">
-      <h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;">Bucked Island</h3>
+      <h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;">Bucked <br>Island</h3>
 	  <div class="store-link">
-        <a href="https://play.google.com/store/apps/details?id=com.BuckedGames.BuckedIslandV1" target="_blank">
-          <img class="responsive-image" class="kayma-yazi" src="STOREIMAGE/playstore.svg" alt="Google Play Store">
+        <a class="kaydirilmis-yazi" href="https://play.google.com/store/apps/details?id=com.BuckedGames.BuckedIslandV1" target="_blank">
+          <img class="responsive-image" src="STOREIMAGE/playstore.svg" alt="Google Play Store">
         </a>
-        <a href="https://apps.apple.com/tr/app/bucked-island/id1589031360" target="_blank">
-        <img class="responsive-image" class="kayma-yazi" src="STOREIMAGE/appstore.svg" alt="Apple App Store">
+        <a class="kaydirilmis-yazi" href="https://apps.apple.com/tr/app/bucked-island/id1589031360" target="_blank">
+        <img class="responsive-image" src="STOREIMAGE/appstore.svg" alt="Apple App Store">
         </a>
       </div>
     </div>
 
 	<div class="image-wrapper">
 		<img src="GAMES/CountMaster2.png" alt=""style="max-width: 100%;">
-		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;">Count With Bucked</h3>
+		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;">Count With <br>Bucked</h3>
 		<div class="store-link">
 			<a href="https://play.google.com/store/apps/details?id=com.buckedgames.buckedcountV2" target="_blank">
 			  <img src="STOREIMAGE/playstore.svg" alt="Google Play Store">
@@ -136,7 +159,7 @@
 
     <div class="image-wrapper">
       <img src="GAMES/CountMaster.png" alt=""style="max-width: 100%;">
-      <h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;">Count With Bucked X</h3>
+      <h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;">Count With <br>Bucked X</h3>
 	  <div class="store-link">
         <a href="https://play.google.com/store/apps/details?id=com.buckedgames.buckedcountxV2" target="_blank">
           <img class="responsive-image" src="STOREIMAGE/playstore.svg" alt="Google Play Store">
@@ -196,7 +219,7 @@
 	<div class="image-row">
 	  <div class="image-wrapper">
 		<img src="GAMES/TriviaDrive.png" alt="">
-		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;">Trivia Drive TR</h3>
+		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;">Trivia Drive</h3>
 		<div class="store-link">
 			<a href="https://play.google.com/store/apps/details?id=com.BuckedGames.GenelKulturTr" target="_blank">
 			  <img class="responsive-image" src="STOREIMAGE/playstore.svg" alt="Google Play Store">
