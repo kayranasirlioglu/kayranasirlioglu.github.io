@@ -4504,10 +4504,10 @@ input, select, textarea {
 		border: 0;
 		color: #ffffff;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
-		font-size: 0.9rem;
+		font-size: 2rem;
 		font-weight: 900;
 		letter-spacing: 0.075em;
-		padding: 0.375rem 1.25rem;
+		padding: 1rem 2rem;
 		text-transform: uppercase;
 		z-index: 10001;
 	}
@@ -4663,6 +4663,7 @@ input, select, textarea {
 		@media screen and (max-width: 980px) {
 
 			#navPanel {
+				max-width: 250rem;
 				display: block;
 			}
 
@@ -4671,6 +4672,7 @@ input, select, textarea {
 		@media screen and (max-width: 736px) {
 
 			#navPanel {
+				max-width: 250rem;
 				padding: 2.5rem 1.75rem;
 			}
 
