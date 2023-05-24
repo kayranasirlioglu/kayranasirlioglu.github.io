@@ -2,12 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
 @import url("https://fonts.google.com/specimen/Inconsolata");
 
-/*
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
-
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
 pre, a, abbr, acronym, address, big, cite,
@@ -3408,7 +3402,7 @@ input, select, textarea {
 				-ms-transform: translateY(2rem);
 				transform: translateY(2rem);
 				opacity: 0;
-				visibility: hidden;
+				visibility: visible;
 			}
 
 		#intro.hidden {
@@ -3420,9 +3414,9 @@ input, select, textarea {
 			-moz-transition: opacity 0.5s ease, -moz-transform 0.5s ease, visibility 0.5s;
 			-webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease, visibility 0.5s;
 			-ms-transition: opacity 0.5s ease, -ms-transform 0.5s ease, visibility 0.5s;
-			transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+			transition: opacity 2s ease, transform 2s ease, visibility 2s;
 			opacity: 0;
-			visibility: hidden;
+			visibility: visible !important;
 		}
 
 			#intro.hidden + #header .logo {
@@ -3440,6 +3434,7 @@ input, select, textarea {
 			-ms-transform: translateY(2rem);
 			transform: translateY(2rem);
 			opacity: 0;
+			visibility: visible !important;
 		}
 
 			body.is-preload #intro:not(.hidden) + #header + #nav {
