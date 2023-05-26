@@ -1,6 +1,7 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
-@import url("https://fonts.google.com/specimen/Inconsolata");
+
+
 
 html, body, div, span, applet, object,
 iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
@@ -142,8 +143,9 @@ input, select, textarea {
 		color: #212931;
 	}
 
+										/* ANA SAYFA YAZI TIPI */
 	body, input, select, textarea {
-		font-family: "Merriweather", Georgia, serif;
+		font-family: 'Sans-serif', monospace;
 		font-weight: 300;
 		font-size: 1rem;
 		line-height: 2.375;
@@ -2402,7 +2404,7 @@ input, select, textarea {
 			display: inline-block;
 			font-size: 1rem;
 			letter-spacing: 0;
-			font-family: "Merriweather", Georgia, serif;
+			font-family: 'Sans-serif', monospace;
 			text-transform: none;
 			font-weight: 300;
 			padding-left: 2.8rem;
@@ -3222,20 +3224,20 @@ input, select, textarea {
 		overflow: hidden;
 	}
 
-		#wrapper > .bg {
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			background-color: #000000;
-			background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../BG3.JPG");
-			background-size: auto,								auto,														100% auto;
-			background-position: center,								center,														top center;
-			background-repeat: repeat,								no-repeat,													no-repeat;
-			background-attachment: scroll,								scroll,														scroll;
-			z-index: -1;
-		}
+	#wrapper > .bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: #000000;
+		background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../../BG3.JPG");
+		background-size: auto, auto, cover; /* Değerleri güncelledik */
+		background-position: center, center, top center;
+		background-repeat: repeat, no-repeat, no-repeat;
+		background-attachment: scroll, scroll, scroll;
+		z-index: -1;
+	}
 
 			#wrapper > .bg.fixed {
 				position: fixed;
@@ -3630,7 +3632,7 @@ input, select, textarea {
 		#nav ul.divided li {
 			border-top-color: #ffffff;
 		}
-
+			/*PANEL ICON RENK PARLAMASI*/
 		#nav ul.icons li a.icon:hover:before {
 			color: #18bfef;
 		}
@@ -3646,7 +3648,7 @@ input, select, textarea {
 		#nav input, #nav select, #nav textarea {
 			color: #ffffff;
 		}
-
+			/* NAV PANEL TUM YAZI RENKLERI*/
 		#nav a {
 			color: #ffffff;
 			border-bottom-color: rgb(255, 255, 255);
@@ -3715,10 +3717,10 @@ input, select, textarea {
 					outline: none;
 					padding: 0 2rem;
 				}
-
+						/* NAV PANEL UZERINE GELINNCE ALT RENK*/
 					#nav ul.links li a:hover {
 						color: inherit !important;
-						background-color: rgb(255, 255, 255);
+						background-color: rgb(0, 0, 0);
 					}
 
 				#nav ul.links li.active {
@@ -3947,14 +3949,14 @@ input, select, textarea {
 		}
 
 /* Footer */
-
+				/*Footer color here*/
 	#footer {
 		color: #717981;
 		display: -moz-flex;
 		display: -webkit-flex;
 		display: -ms-flex;
 		display: flex;
-		background-color: #f5f5f5;
+		background-color: #7676764a;
 		color: #ffffff;
 		cursor: default;
 		position: relative;
@@ -3968,8 +3970,10 @@ input, select, textarea {
 			color: #ffffff;
 		}
 
+				/*LOGO RENKLERI*/
+				
 		#footer a {
-			color: #717981;
+			color: #ffffff;
 			border-bottom-color: rgba(113, 121, 129, 0.5);
 		}
 
@@ -4277,7 +4281,7 @@ input, select, textarea {
 					}
 
 					#footer > section.split.contact > section:last-child {
-						padding: 3rem 4rem 4rem 4rem;
+						padding: 3rem 4rem 2rem 5rem;
 					}
 
 					#footer > section.split.contact > section.alt {
@@ -4386,7 +4390,7 @@ input, select, textarea {
 	#copyright {
 		color: #ffffff;
 		position: relative;
-		color: rgba(255, 255, 255, 0.25);
+		color: rgb(255, 255, 255);
 		cursor: default;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 0.8rem;
@@ -4485,7 +4489,7 @@ input, select, textarea {
 		}
 
 /* Nav Panel */
-
+				/* MENU CUBUGU SAG USTTEKI*/
 	#navPanelToggle {
 		text-decoration: none;
 		-moz-transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -4495,14 +4499,14 @@ input, select, textarea {
 		display: none;
 		position: fixed;
 		top: 0.75rem;
-		right: 0.75rem;
+		right: 0.2rem;
 		border: 0;
 		color: #ffffff;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 2rem;
 		font-weight: 900;
 		letter-spacing: 0.075em;
-		padding: 1rem 2rem;
+		padding: 1rem 1rem;
 		text-transform: uppercase;
 		z-index: 10001;
 	}
@@ -4539,15 +4543,7 @@ input, select, textarea {
 
 			#navPanelToggle {
 				display: block;
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			#navPanelToggle {
-				font-size: 0.8rem;
-				padding: 0.25rem 1rem;
+				
 			}
 
 		}
@@ -4687,5 +4683,35 @@ input, select, textarea {
 			box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.2);
 			visibility: visible;
 		}
-
 	}
+
+					/* SCROLL TOP BUTTON*/
+
+	#myBtn {
+		display: fixed; /* Hidden by default */
+		position: fixed; /* Fixed/sticky position */
+		bottom: 20px; /* Place the button at the bottom of the page */
+		right: 30px; /* Place the button 30px from the right */
+		z-index: 99; /* Make sure it does not overlap */
+		border: none; /* Remove borders */
+		outline: none; /* Remove outline */
+		background-color: rgb(255, 255, 255); /* Set a background color */
+		color: rgb(0, 0, 0); /* Text color */
+		cursor: pointer; /* Add a mouse pointer on hover */
+		padding: 20px; /* Some padding */
+		border-radius: 50px; /* Rounded corners */
+		font-size: 20px; /* Increase font size */
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 50px;
+		height: 50px;
+		opacity: 1;
+			transition: opacity 0.3s ease-in-out; /* Animasyon süresi ve geçişi ayarlar */
+	  }
+	  
+	  #myBtn:hover {
+		background-color: #555; /* Add a dark-grey background on hover */
+		opacity: 1;
+	  }
+	  

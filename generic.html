@@ -1,5 +1,6 @@
 <!DOCTYPE HTML>
 <html>
+	
 	<head>
 		<title>KAYRA NASIRLIOGLU</title>
 		<meta charset="utf-8" />
@@ -15,21 +16,60 @@
 	</head>
 	<body class="is-preload">
 
+		<!--YUKARI KAYDIRMA BUTONU-->
+
+		<button id="myBtn">&uarr;</button> 
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			var myButton = $("#myBtn");
+			var isScrolling = false; // Kaydırmanın durumu
+
+			myButton.click(function() {
+				smoothScrollToTop();
+			});
+
+			$(window).scroll(function() {
+				// Kaydırma hareketini takip eder
+				if (isScrolling) {
+					clearTimeout(isScrolling);
+				}
+
+				// Kaydırmayı durdurmak için 0.5 saniye bekler
+				isScrolling = setTimeout(function() {
+					isScrolling = false;
+				}, 500);
+			});
+
+			// Sayfanın üstüne animasyonlu bir şekilde kaydırma işlemi
+			function smoothScrollToTop() {
+				var currentScroll = $(document).scrollTop();
+
+				if (currentScroll > 0 && !isScrolling) {
+					isScrolling = true;
+					$("html, body").animate({ scrollTop: 0 }, "slow", function() {
+						isScrolling = false;
+					});
+				}
+			}
+		});
+	</script>
+
 		<!-- Wrapper -->
 			<div id="wrapper">
 
 			
 				<!-- Header -->
 					<header id="header">
-						<a href="index.html" class="logo" style="font-size: 50px; font-family: 'Inconsolata', monospace;">KAYRA NASIRLIOĞLU</a>
+						<a href="index.html" class="logo" style="font-size: 50px; font-family: 'Sans-serif', monospace;">KAYRA NASIRLIOĞLU</a>
 					</header>
 
 				<!-- Nav -->
 					<nav id="nav">
 						<ul class="links">
-							<li><a href="index.html" style="font-size: 20px; font-family: 'Inconsolata', monospace;">About Me</a></li>
-							<li class="active"><a href="generic.html" style="font-size: 20px; font-family: 'Inconsolata', monospace; ">Mix&Mastering</a></li>
-							<li><a href="elements.html" style="font-size: 20px; font-family: 'Inconsolata', monospace;">Game Audio</a></li>
+							<li><a href="index.html" style="font-size: 20px; font-family: 'Sans-serif', monospace;">About Me</a></li>
+							<li class="active"><a href="generic.html" style="font-size: 20px; font-family: 'Sans-serif', monospace; ">Mix&Mastering</a></li>
+							<li><a href="elements.html" style="font-size: 20px; font-family: 'Sans-serif', monospace;">Game Audio</a></li>
 						</ul>
 						<ul class="icons alt">
 							<li><a href="https://www.instagram.com/kayranasirlioglu/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
@@ -45,7 +85,7 @@
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<h2 style="font-family: 'Inconsolata', monospace;">Mix&Mastering</h2>
+									<h2 style="font-family: 'Sans-serif', monospace;">Mix&Mastering</h2>
 									<br>
 									<p style="font-size: 20px;">Here are some of the artists I have worked with so far. Many more are to come so stay tuned!</p>
 								</article>
@@ -101,18 +141,18 @@
   <div class="image-row">
     <div class="image-wrapper">
       <img src="covers/Alezer.jpeg" alt="Alezer"style="max-width: 100%; height: auto;">
-      <h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;"><br>Alezer</h3>
-      <p class="kayma-yazi" style="max-width: 100%; height: auto; font-family: 'Inconsolata', monospace;">Mixing</p>
+      <h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Sans-serif', monospace;"><br>Alezer</h3>
+      <p class="kayma-yazi" style="max-width: 100%; height: auto; font-family: 'Sans-serif', monospace;">Mixing</p>
     </div>
     <div class="image-wrapper">
       <img src="covers/BMOO.jpeg" alt="BMOO 2"style="max-width: 100%; height: auto;">
-      <h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;"><br>BAU Oda Orkestrası</h3>
-      <p style="max-width: 100%; height: auto; font-family: 'Inconsolata', monospace;">Recording<br>Mixing/Mastering</p>
+      <h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Sans-serif', monospace;"><br>BAU Oda Orkestrası</h3>
+      <p style="max-width: 100%; height: auto; font-family: 'Sans-serif', monospace;">Recording<br>Mixing/Mastering</p>
     </div>
     <div class="image-wrapper">
       <img src="covers/BPKLogo.jpeg" alt="BPK 3"style="max-width: 100%; height: auto;">
-      <h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;"><br>BAU POLİFONİK KORO</h3>
-      <p style="max-width: 100%; height: auto; font-family: 'Inconsolata', monospace;">Recording<br>Mixing/Mastering</p>
+      <h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Sans-serif', monospace;"><br>BAU POLİFONİK KORO</h3>
+      <p style="max-width: 100%; height: auto; font-family: 'Sans-serif', monospace;">Recording<br>Mixing/Mastering</p>
     </div>
   </div>
 </body>
@@ -120,18 +160,18 @@
 	<div class="image-row">
 	  <div class="image-wrapper">
 		<img src="covers/BeratErcan.jpeg" alt="Berat Ercan"style="max-width: 100%;">
-		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;"><br>Berat Ercan</h3>
-		<p style="font-family: 'Inconsolata', monospace;">Mastering</p>
+		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Sans-serif', monospace;"><br>Berat Ercan</h3>
+		<p style="font-family: 'Sans-serif', monospace;">Mastering</p>
 	  </div>
 	  <div class="image-wrapper">
 		<img src="covers/Ethnotic.jpeg" alt="Ethnotic"style="max-width: 100%;">
-		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;"><br>Ethnotic</h3>
-		<p style="font-family: 'Inconsolata', monospace;">Recording<br>Mixing/Mastering</p>
+		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Sans-serif', monospace;"><br>Ethnotic</h3>
+		<p style="font-family: 'Sans-serif', monospace;">Recording<br>Mixing/Mastering</p>
 	  </div>
 	  <div class="image-wrapper">
 		<img src="covers/EV.jpeg" alt="EV"style="max-width: 100%;">
-		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;"><br>EV The Band</h3>
-		<p style="font-family: 'Inconsolata', monospace;">Mixing/Mastering</p>
+		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Sans-serif', monospace;"><br>EV The Band</h3>
+		<p style="font-family: 'Sans-serif', monospace;">Mixing/Mastering</p>
 	  </div>
 	</div>
   </body>
@@ -139,18 +179,18 @@
 	<div class="image-row">
 	  <div class="image-wrapper">
 		<img src="covers/Melda.jpeg" alt="Melda"style="max-width: 100%;">
-		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;"><br>Melda</h3>
-		<p style="font-family: 'Inconsolata', monospace;">Recording<br>Mixing/Mastering</p>
+		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Sans-serif', monospace;"><br>Melda</h3>
+		<p style="font-family: 'Sans-serif', monospace;">Recording<br>Mixing/Mastering</p>
 	  </div>
 	  <div class="image-wrapper">
 		<img src="covers/NURO.jpeg" alt="NURO"style="max-width: 100%;">
-		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;"><br>Nuro</h3>
-		<p style="font-family: 'Inconsolata', monospace;">Recording<br>Mixing/Mastering</p>
+		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Sans-serif', monospace;"><br>Nuro</h3>
+		<p style="font-family: 'Sans-serif', monospace;">Recording<br>Mixing/Mastering</p>
 	  </div>
 	  <div class="image-wrapper">
 		<img src="covers/Ozan.jpeg" alt="Ozan"style="max-width: 100%;">
-		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;"><br>OZAN TEMİZKAN</h3>
-		<p style="font-family: 'Inconsolata', monospace;">Mixing/Mastering</p>
+		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Sans-serif', monospace;"><br>OZAN TEMİZKAN</h3>
+		<p style="font-family: 'Sans-serif', monospace;">Mixing/Mastering</p>
 	  </div>
 	</div>
   </body>
@@ -158,8 +198,8 @@
 	<div class="bottom-image">
 	  <div class="image-wrapper">
 		<img src="covers/polarnormal.jpeg" alt="polarnormal"style="max-width: 100%;">
-		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Inconsolata', monospace;"><br>Polar Normal</h3>
-		<p style="font-family: 'Inconsolata', monospace;">Mastering</p>
+		<h3 style="max-width: 100%; height: auto; color: #ffffff; font-family: 'Sans-serif', monospace;"><br>Polar Normal</h3>
+		<p style="font-family: 'Sans-serif', monospace;">Mastering</p>
 	  </div>
 	</div>
   </body>
@@ -170,8 +210,8 @@
 				<footer id="footer">
 					<section class="split contact">
 						<section>
-							<h2 style="font-size: 40px; color: rgb(0, 0, 0); font-family: 'Inconsolata', monospace;">Contact<br>
-								<a href="mailto:kayra.nasirlioglu@gmail.com" style="font-size: 20px; padding: 2px; color: black; font-family: 'Inconsolata', monospace;">kayra.nasirlioglu@gmail.com</a>
+							<h2 style="font-size: 40px; color: rgb(0, 0, 0); font-family: 'Sans-serif', monospace;">Contact<br>
+								<a href="mailto:kayra.nasirlioglu@gmail.com" style="font-size: 20px; padding: 2px; color: black; font-family: 'Sans-serif', monospace;">kayra.nasirlioglu@gmail.com</a>
 <br>
 							<ul class="icons alt">
 								<li><a href="https://www.instagram.com/kayranasirlioglu/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
@@ -186,10 +226,8 @@
 			<!-- Copyright -->
 				<div id="copyright">
 					<ul class="icons alt">
-						<li><a href="https://www.instagram.com/kayranasirlioglu/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://www.linkedin.com/in/kayranasirlioglu/" class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://www.facebook.com/kayra.nasirlioglu.music/" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<li><a href="https://t.me/kayranasirlioglu" class="icon brands alt fa-telegram"><span class="label">Telegram</span></a></li>
+						<p style="font-style: italic; text-transform: none; text-align: center;">&copy; Copyright 2023. <br>
+							All rights reserved.</p>
 					</ul>
 				</div>
 
