@@ -3384,6 +3384,11 @@ input, select, textarea {
 
 		#intro h1 {
 			font-size: 5rem;
+			line-height: 2;
+		}
+
+		#intro h2 {
+			font-size: 3rem;
 			line-height: 1;
 		}
 
@@ -3453,6 +3458,16 @@ input, select, textarea {
 				padding: 0rem 0rem 0rem 0rem ;
 				min-height: 80vh;
 			}
+			#intro h1 {
+				font-size: 4rem;
+				line-height: 1.1;
+				margin-bottom: 1rem;
+			}
+
+			#intro h2 {
+				font-size: 3rem;
+				line-height: 1.1;
+			}
 
 				#intro p br {
 					display: none;
@@ -3471,14 +3486,15 @@ input, select, textarea {
 				min-height: 70vh;
 			}
 
-				#intro h1 {
-					font-size: 3.25rem;
-					line-height: 1.1;
-					margin-bottom: 1rem;
-				}
+			#intro h1 {
+				font-size: 4rem;
+			}
 
+			#intro h2{
+				font-size: 1rem;
+			}
 				#intro p {
-					font-size: 1rem;
+					font-size: 2rem;
 					margin-top: 0rem;
 				}
 
@@ -3975,6 +3991,7 @@ input, select, textarea {
 		#footer a {
 			color: #ffffff;
 			border-bottom-color: rgba(113, 121, 129, 0.5);
+			top: 10px;
 		}
 
 			#footer a:hover {
